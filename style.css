@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fff;
+}
+.dark {
+  --white: #ffa500;
+}
+body {
+  overflow-x: hidden;
+}
+.dark {
+  background-color: orange;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  padding: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgb(229, 240, 83);;
+}
+header .logo {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+header ul li {
+  list-style: none;
+  display: flex;
+  margin-left: 30px;
+}
+header ul li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+}
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.content .textbox {
+  position: relative;
+  max-width: 600px;
+  margin-right: 20px;
+  z-index: 2;
+}
+.content .textbox h2 {
+  font-size: 50px;
+  line-height: 1.3em;
+  margin-bottom: 10px;
+}
+.content .textbox h2 span {
+  font-size: 1.3em;
+  color: red;
+}
+.dark .content .textbox h2 span {
+  font-size: 1.3em;
+  color: rgb(229, 240, 83);
+}
+.content .textbox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background-color: rgb(229, 240, 83);
+  color: red;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.content .imgbox {
+  position: relative;
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.content .imgbox::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 520px;
+  background-color: rgb(229, 240, 83);
+  border-radius: 80px;
+}
+.content .imgbox img {
+  position: relative;
+  max-width: 500px;
+  z-index: 1;
+}
+.snsicon {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  left: 100px;
+  justify-content: center;
+  align-content: center;
+}
+.snsicon li {
+  list-style: none;
+}
+.snsicon li a {
+  display: inline-block;
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid;
+}
+.snsicon li a .fab {
+  font-size: 1.2em;
+}
+.snsicon li a:hover {
+  background-color: rgb(229, 240, 83);
+  color: red;
+}
+.themeswitch {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.themeswitch::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f186';
+  color: rgb(192, 184, 184);
+}
+.themeswitch.active::before {
+  content: '\f185';
+  color: rgb(255, 166, 0);
+}
+@media (max-width: 991px) {
+  section {
+    padding: 150px 20px;
+    height: 100%;
+  }
+  header {
+    padding: 20px;
+  }
+  .textbox {
+    margin-top: 20px;
+  }
+  .snsicon {
+    bottom: 20px;
+    left: 20px;
+  }
+  .content {
+    flex-direction: column-reverse;
+  }
+  .content .textbox, .content .imgbox {
+    max-width: 100%;
+    margin-right: 0px;
+  }
+  .content .imgbox img {
+    max-width: 400px;
+  }
+  .content .imgbox::before {
+    clip-path: circle(150px at center);
+  }
+  .content .textbox h2 {
+    font-size: 2em;
+  }
+  .navigation {
+    display: none;
+  }
+  .navigation.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    flex-direction: column;
+  }
+  header ul li {
+    margin-left: 0;
+  }
+  header ul li a {
+    margin: 10px 0;
+    font-weight: 300;
+    font-size: 3em;
+    color: black
+  }
+  .themeswitch {
+    margin-top: 10px;
+  }
+  .menutoggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    cursor: pointer;
+    z-index: 10000;
+  }
+  .menutoggle.active {
+    background: url(close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    cursor: pointer;
+    background-size: 25px;
+  }
+  .dark .menutoggle {
+    filter: invert(0);
+  }
+}
