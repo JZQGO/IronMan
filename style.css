@@ -251,3 +251,13 @@ header ul li a {
     filter: invert(0);
   }
 }
+@media (max-width: 500px) {
+  section {
+    padding: 200px 20px;
+    width: min-content;
+    height: 1200px; 
+  }
+  .content .textbox {
+    margin-top: 100px;
+  }
+}
