@@ -229,6 +229,11 @@ header ul li a {
   }
   .themeswitch {
     margin-top: 10px;
+    width: 60px;
+    height: 60px;
+  }
+  .themeswitch::before {
+    font-size: 30px;
   }
   .menutoggle {
     position: relative;
