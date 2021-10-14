@@ -177,7 +177,7 @@ header ul li a {
   text-decoration: none;
   border: 1px solid;
 }
-.next a .fas {
+.next a .far {
   padding-right: 10px;
 }
 .next a:hover {
