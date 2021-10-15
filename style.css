@@ -123,7 +123,7 @@ header ul li a {
 .snsicon {
   display: flex;
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   left: 100px;
   justify-content: center;
   align-content: center;
@@ -231,10 +231,10 @@ header ul li a {
     margin-right: 0px;
   }
   .content .imgbox img {
-    max-width: 400px;
+    max-width: 100%;
   }
   .content .imgbox::before {
-    clip-path: circle(150px at center);
+    clip-path: circle(130px at center);
   }
   .content .textbox h2 {
     font-size: 2em;
@@ -293,4 +293,11 @@ header ul li a {
   .dark .menutoggle {
     filter: invert(0);
   }
+}
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 5px;
+  height: 30px;
+  background-color: rgb(229, 240, 83);
 }
