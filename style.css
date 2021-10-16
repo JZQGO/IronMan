@@ -129,7 +129,7 @@ header ul li a {
 .snsicon {
   display: flex;
   position: absolute;
-  bottom: 50px;
+  bottom: 100px;
   left: 100px;
   justify-content: center;
   align-content: center;
@@ -161,7 +161,7 @@ header ul li a {
   display: flex;
   position: absolute;
   margin-top: 10px;
-  bottom: 5px;
+  bottom: 50px;
   left: 100px;
   justify-content: center;
   align-content: center;
